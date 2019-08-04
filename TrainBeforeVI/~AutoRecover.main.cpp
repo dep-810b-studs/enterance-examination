@@ -9,8 +9,6 @@
 #include "Department.h"
 
 
-
-
 int main()
 {
 	setlocale(LC_ALL, "RUS");
