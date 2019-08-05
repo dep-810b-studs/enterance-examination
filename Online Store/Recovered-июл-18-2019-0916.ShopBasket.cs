@@ -41,7 +41,6 @@ namespace Online_Store
             {
                 throw new ArgumentException();
             }
-
             products[product] = quantity;
         }
     }
