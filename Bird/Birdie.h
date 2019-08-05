@@ -1,5 +1,7 @@
 #pragma once
 
+#include<fstream>
+
 class Birdie
 {
 private:
@@ -15,5 +17,7 @@ public:
 	inline char * GetFamily() const { return _family; }
 
 	Birdie & operator = (Birdie&);
+
+	friend std::ifstream & operator << (std::ifstream &,Birdie&);
 	//~Birdie();
-};
+};	

@@ -26,7 +26,7 @@ int main(int argc, char * argv[])
 
 	std::cout << birdie3.GetWeight() << std::endl;
 	std::cout << birdie3.GetSpecies() << std::endl;
-	std::cout << birdie3.GetFamily() << std::endl;
+	std::cout << birdie.GetFamily() << std::endl;
 
 	system("pause");
 

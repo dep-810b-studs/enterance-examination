@@ -29,6 +29,15 @@ Birdie& Birdie::operator=(Birdie & birdie)
 	return *this;
 }
 
+std::ofstream & operator << (std::ofstream & file_stream, Birdie & birdie)
+{
+    file_stream << birdie.GetFamily() << " ";
+	file_stream << birdie.GetSpecies() << " ";
+	file_stream << birdie.GetWeight() << " ";
+
+	return file_stream;
+}
+
 /*
 Birdie::~Birdie()
 {
