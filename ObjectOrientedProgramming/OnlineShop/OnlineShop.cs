@@ -23,18 +23,7 @@ namespace ObjectOrientedProgramming
 
             _products.Add(product, quantity);
         }
-
-        public List<string> getProducts()
-        {
-            var productsSortedByPrices = _products
-                .Select(product => (product.Key, product.Value))
-                .OrderByDescending(product=> product.Value)
-                .Select(product => product.Key)
-                .ToList();
-
-            return productsSortedByPrices;
-        }
-
+        
         public void removeProduct(string product)
         {
             ValidateProductTitle(product);
@@ -49,6 +38,17 @@ namespace ObjectOrientedProgramming
             CheckProductAvailability(product);            
             
             _products[product] = quantity;
+        }
+
+        public List<string> getProducts()
+        {
+            var productsSortedByPrices = _products
+                .Select(product => (product.Key, product.Value))
+                .OrderByDescending(product=> product.Value)
+                .Select(product => product.Key)
+                .ToList();
+
+            return productsSortedByPrices;
         }
         
         private void ValidateProductTitle(string productTitle)
