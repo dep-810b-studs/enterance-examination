@@ -56,7 +56,8 @@ namespace ObjectOrientedProgramming
 
             var articlesWithSpecifiedTag = _articlesWithTags
                 .Where(articleWithTags => articleWithTags.Value.Contains(tag))
-                .Select(articleWithTags => articleWithTags.Key);
+                .Select(articleWithTags => articleWithTags.Key)
+                .OrderBy(article => article);
 
             return articlesWithSpecifiedTag.ToList();
         }
