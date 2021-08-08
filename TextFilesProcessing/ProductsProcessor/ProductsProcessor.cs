@@ -5,7 +5,20 @@ using System.Linq;
 
 namespace TextFilesProcessing
 {
-    public record Product(string Name, string Country, double Price, DateTime Date);
+    public record Product(string Name, string Country, double Price, DateTime Date)
+    {
+        public static Product GetFromLine(string line)
+        {
+            var splittedLine = line.Split(" ");
+
+            var name = splittedLine[0];
+            var country = splittedLine[1];
+            var price = double.Parse(splittedLine[2]);
+            var date = DateTime.Parse(splittedLine[3]);
+
+            return new (name, country, price, date);
+        }
+    }
 
     public static class ProductsProcessor
     {
@@ -18,8 +31,8 @@ namespace TextFilesProcessing
             }
 
             var products = File.ReadLines(fullFileName)
-                .Select(line => line.Split(" "))
-                .Select(splittedLine => new Product(splittedLine[0], splittedLine[1], double.Parse(splittedLine[2]), DateTime.Parse(splittedLine[3])));
+                .Select(Product.GetFromLine)
+                .ToList();
             
             var productsOrderedByPrices = products.OrderBy(product => -product.Price);
             
