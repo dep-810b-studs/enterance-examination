@@ -1,38 +1,14 @@
 # Вступительные испытания в магистратуру
-```
-Московский Авиационный Институт (Национальный исследовательский университет)
-Вступительный Междисциплинарный экзамен в магистратуру
-по направлению подготовки
-02.04.02 ¾Фундаментальная информатика и информационные технологии¿
-```
-```
-На одном из объектно-ориентированных языков программирования:
-a) создайте класс Интернет-аукциона, реализующий следующие операции и инкапсули-
-рующий структуры из библиотеки коллекций для хранения данных в памяти.
-1) Выставление товара на аукцион с начальной ценой
-void placeProduct(String product, int initialPrice);
-2) Добавление пользователем заявки на покупку выставленного на аукцион товара
-void addBid(String user, String product, int price);
-3) Удаление заявки пользователем
-void removeBid(String user, String product);
-4) Продажа товара, выставленного на аукцион по максимальной цене из списка заяв-
-ленных, вернув имя пользователя, которому был продан товар
-String sellProduct(String product);
-b) выделите интерфейс или абстрактный класс, описывающий методы или функции для
-реализованных операций;
-c) корректно обработайте исключительные ситуации, для некорректных входных данных
-программа должна генерировать исключение;
-d) оцените вычислительную сложность каждой операции в нотации O(n).
-В решении укажите используемый язык программирования и его версию.
-```
-Напишите код на C++, который обрабатывает текстовые файлы. Текстовый файл содержит
-    записи вида:
-       <Фамилия> <Имя> <Возраст> <Телефон>,
 
+## Типажи пятого задания(ООП):
+- [База Знаний](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/KnowledgeBase)
+- [Онлайн аукцион](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/OnlineAuction)
+- [Интернет магазин](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/OnlineShop)
+- [Телефонная книга](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/PhoneBook)
+- [Социальная сеть](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/SocialNetwork)
+- [Университетская библиотека](https://github.com/dep-810b-studs/enterance-examination/tree/master/ObjectOrientedProgramming/UniversityLibrary)
 
-по одной записи в строке, поля отделяются произвольным числом пробелов. Напишите про-
-грамму, которая прочитает данные из этого файла, сформирует динамическую коллекцию
-объектов, выведет построчно все записи, упорядоченные по убыванию возраста и выведет
-на экран тех, кто младше среднего возраста на 7 лет.
-```
+## Типажи шестого задания(обработка текстовых файлов):
+- [Анализ кафедр из текстового файла](https://github.com/dep-810b-studs/enterance-examination/tree/master/TextFilesProcessing/DepartmentsProcessor)
+- [Анализ продуктов из текстового файла](https://github.com/dep-810b-studs/enterance-examination/tree/master/TextFilesProcessing/ProductsProcessor)
 
