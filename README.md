@@ -12,5 +12,5 @@
 - [Анализ кафедр из текстового файла](https://github.com/dep-810b-studs/enterance-examination/tree/master/TextFilesProcessing/DepartmentsProcessor)
 - [Анализ продуктов из текстового файла](https://github.com/dep-810b-studs/enterance-examination/tree/master/TextFilesProcessing/ProductsProcessor)
 
-##P.S.: все задания выполнялись на ЯП C# v.9.0
+## P.S.: все задания выполнялись на ЯП C# v.9.0
 
