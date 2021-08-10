@@ -12,8 +12,14 @@ namespace TextFilesProcessing
             
             var title = splittedLine[0];
             var headLastName = splittedLine[1];
-            var graduatedBachelorsVolume = int.Parse(splittedLine[2]);
-            var year = uint.Parse(splittedLine[3]);
+            
+            if (!int.TryParse(splittedLine[2], out var graduatedBachelorsVolume))
+                throw new ArgumentException(
+                    $"GraduatedBachelorsVolume for department {title} was not in correct format");
+
+            if (!uint.TryParse(splittedLine[3], out var year))
+                throw new ArgumentException(
+                    $"Graduate year for department {title} was not in correct format");
 
             return new(title, headLastName, graduatedBachelorsVolume, year);
         }
